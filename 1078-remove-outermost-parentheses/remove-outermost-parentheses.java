@@ -7,12 +7,14 @@ class Solution {
         char close = ')';
        StringBuilder hupp = new StringBuilder() ; 
         for (int i =0;i<n;i++){
-           
-            if(s.charAt(i)==open){
+           char c = s.charAt(i);
+
+            if(c==open){
                 if(depth>0){ hupp.append(open);}
             depth++;
             }
-             else if (s.charAt(i)==close ){
+     
+            if(c==close ){
             depth--;
             if(depth!=0){
           hupp.append(close);
