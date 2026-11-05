@@ -8,7 +8,11 @@ class Solution {
             int temp = arr1[i];
             int check = 0 ;
             for(int j = 0 ;j<m ;j++){
-                if(Math.abs(temp - arr2[j])  <= d)    
+                if(temp<arr2[j]){
+                if(-1*(temp - arr2[j])  <= d)    
+                {check = 1 ;
+                break ;} }
+                else  if((temp - arr2[j] )  <= d)    
                 {check = 1 ;
                 break ;}
             }
